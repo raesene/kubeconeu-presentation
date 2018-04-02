@@ -1,0 +1,8 @@
+# Nmap 7.01 scan initiated Fri May 26 19:11:03 2017 as: nmap -sTV -p- -n -oA kube15 192.168.41.71-73
+Host: 192.168.41.71 ()	Status: Up
+Host: 192.168.41.71 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.1 (Ubuntu Linux; protocol 2.0)/, 4194/open/tcp/////, 6443/open/tcp/////, 6781/open/tcp/////, 6782/open/tcp/////, 6783/open/tcp/////, 9898/open/tcp//monkeycom?///, 10250/open/tcp/////, 10255/open/tcp//unknown///	Ignored State: closed (65526)
+Host: 192.168.41.72 ()	Status: Up
+Host: 192.168.41.72 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.1 (Ubuntu Linux; protocol 2.0)/, 4194/open/tcp/////, 6781/open/tcp/////, 6782/open/tcp/////, 6783/open/tcp/////, 10250/open/tcp/////, 10255/open/tcp//unknown///	Ignored State: closed (65528)
+Host: 192.168.41.73 ()	Status: Up
+Host: 192.168.41.73 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.1 (Ubuntu Linux; protocol 2.0)/, 4194/open/tcp/////, 6781/open/tcp/////, 6782/open/tcp/////, 6783/open/tcp/////, 10250/open/tcp/////, 10255/open/tcp//unknown///	Ignored State: closed (65528)
+# Nmap done at Fri May 26 19:12:46 2017 -- 3 IP addresses (3 hosts up) scanned in 102.81 seconds

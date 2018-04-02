@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: badcontainer
+  # Note that the Pod does not need to be in the same namespace as the loader.
+  labels:
+spec:
+  containers:
+  - name: badcontainer
+    image: 192.168.200.50:5000/alpine-containertools
+    env:
+    - name: ETCDCTL_API
+      value: "3"
+    - name: TERM
+      value: "linux"

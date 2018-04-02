@@ -1,0 +1,551 @@
+# Nmap 7.01 scan initiated Fri May 26 19:11:03 2017 as: nmap -sTV -p- -n -oA kube15 192.168.41.71-73
+Nmap scan report for 192.168.41.71
+Host is up (0.00043s latency).
+Not shown: 65526 closed ports
+PORT      STATE SERVICE     VERSION
+22/tcp    open  ssh         OpenSSH 7.2p2 Ubuntu 4ubuntu2.1 (Ubuntu Linux; protocol 2.0)
+4194/tcp  open  unknown
+6443/tcp  open  ssl/unknown
+6781/tcp  open  unknown
+6782/tcp  open  unknown
+6783/tcp  open  unknown
+9898/tcp  open  monkeycom?
+10250/tcp open  ssl/unknown
+10255/tcp open  unknown
+8 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port4194-TCP:V=7.01%I=7%D=5/26%Time=59286FC3%P=x86_64-pc-linux-gnu%r(Ge
+SF:nericLines,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20t
+SF:ext/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(GetR
+SF:equest,CC,"HTTP/1\.0\x20307\x20Temporary\x20Redirect\r\nLocation:\x20/c
+SF:ontainers/\r\nDate:\x20Fri,\x2026\x20May\x202017\x2018:11:15\x20GMT\r\n
+SF:Content-Length:\x2048\r\nContent-Type:\x20text/html;\x20charset=utf-8\r
+SF:\n\r\n<a\x20href=\"/containers/\">Temporary\x20Redirect</a>\.\n\n")%r(H
+SF:TTPOptions,9C,"HTTP/1\.0\x20307\x20Temporary\x20Redirect\r\nLocation:\x
+SF:20/containers/\r\nDate:\x20Fri,\x2026\x20May\x202017\x2018:11:15\x20GMT
+SF:\r\nContent-Length:\x200\r\nContent-Type:\x20text/plain;\x20charset=utf
+SF:-8\r\n\r\n")%r(RTSPRequest,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCo
+SF:ntent-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20
+SF:Request")%r(Help,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%
+SF:r(SSLSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:
+SF:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r
+SF:(TLSSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\
+SF:x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(
+SF:Kerberos,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20tex
+SF:t/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(FourOh
+SF:FourRequest,CC,"HTTP/1\.0\x20307\x20Temporary\x20Redirect\r\nLocation:\
+SF:x20/containers/\r\nDate:\x20Fri,\x2026\x20May\x202017\x2018:11:40\x20GM
+SF:T\r\nContent-Length:\x2048\r\nContent-Type:\x20text/html;\x20charset=ut
+SF:f-8\r\n\r\n<a\x20href=\"/containers/\">Temporary\x20Redirect</a>\.\n\n"
+SF:)%r(LPDString,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x
+SF:20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(S
+SF:IPOptions,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20te
+SF:xt/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port6443-TCP:V=7.01%T=SSL%I=7%D=5/26%Time=59286FC9%P=x86_64-pc-linux-gn
+SF:u%r(GenericLines,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%
+SF:r(GetRequest,AD,"HTTP/1\.0\x20401\x20Unauthorized\r\nContent-Type:\x20t
+SF:ext/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDa
+SF:te:\x20Fri,\x2026\x20May\x202017\x2018:11:21\x20GMT\r\nContent-Length:\
+SF:x2013\r\n\r\nUnauthorized\n")%r(HTTPOptions,AD,"HTTP/1\.0\x20401\x20Una
+SF:uthorized\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nX-Content
+SF:-Type-Options:\x20nosniff\r\nDate:\x20Fri,\x2026\x20May\x202017\x2018:1
+SF:1:21\x20GMT\r\nContent-Length:\x2013\r\n\r\nUnauthorized\n")%r(RTSPRequ
+SF:est,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/pla
+SF:in\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Help,58,"HT
+SF:TP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConn
+SF:ection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(SSLSessionReq,58,"HTT
+SF:P/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConne
+SF:ction:\x20close\r\n\r\n400\x20Bad\x20Request")%r(TLSSessionReq,58,"HTTP
+SF:/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnec
+SF:tion:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Kerberos,58,"HTTP/1\.1\
+SF:x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\
+SF:x20close\r\n\r\n400\x20Bad\x20Request")%r(FourOhFourRequest,AD,"HTTP/1\
+SF:.0\x20401\x20Unauthorized\r\nContent-Type:\x20text/plain;\x20charset=ut
+SF:f-8\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x20Fri,\x2026\x20May
+SF:\x202017\x2018:11:47\x20GMT\r\nContent-Length:\x2013\r\n\r\nUnauthorize
+SF:d\n")%r(LPDString,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Typ
+SF:e:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")
+SF:%r(SIPOptions,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x
+SF:20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port6781-TCP:V=7.01%I=7%D=5/26%Time=59286FC3%P=x86_64-pc-linux-gnu%r(Ge
+SF:nericLines,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20t
+SF:ext/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(GetR
+SF:equest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/pl
+SF:ain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x2
+SF:0Fri,\x2026\x20May\x202017\x2018:11:15\x20GMT\r\nContent-Length:\x2019\
+SF:r\n\r\n404\x20page\x20not\x20found\n")%r(HTTPOptions,B0,"HTTP/1\.0\x204
+SF:04\x20Not\x20Found\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\n
+SF:X-Content-Type-Options:\x20nosniff\r\nDate:\x20Fri,\x2026\x20May\x20201
+SF:7\x2018:11:15\x20GMT\r\nContent-Length:\x2019\r\n\r\n404\x20page\x20not
+SF:\x20found\n")%r(RTSPRequest,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nC
+SF:ontent-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x2
+SF:0Request")%r(Help,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Typ
+SF:e:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")
+SF:%r(SSLSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%
+SF:r(TLSSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:
+SF:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r
+SF:(Kerberos,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20te
+SF:xt/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(FourO
+SF:hFourRequest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20t
+SF:ext/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDa
+SF:te:\x20Fri,\x2026\x20May\x202017\x2018:11:40\x20GMT\r\nContent-Length:\
+SF:x2019\r\n\r\n404\x20page\x20not\x20found\n")%r(LPDString,58,"HTTP/1\.1\
+SF:x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\
+SF:x20close\r\n\r\n400\x20Bad\x20Request")%r(SIPOptions,58,"HTTP/1\.1\x204
+SF:00\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\x20c
+SF:lose\r\n\r\n400\x20Bad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port6782-TCP:V=7.01%I=7%D=5/26%Time=59286FC3%P=x86_64-pc-linux-gnu%r(Ge
+SF:nericLines,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20t
+SF:ext/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(GetR
+SF:equest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/pl
+SF:ain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x2
+SF:0Fri,\x2026\x20May\x202017\x2018:11:15\x20GMT\r\nContent-Length:\x2019\
+SF:r\n\r\n404\x20page\x20not\x20found\n")%r(HTTPOptions,B0,"HTTP/1\.0\x204
+SF:04\x20Not\x20Found\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\n
+SF:X-Content-Type-Options:\x20nosniff\r\nDate:\x20Fri,\x2026\x20May\x20201
+SF:7\x2018:11:15\x20GMT\r\nContent-Length:\x2019\r\n\r\n404\x20page\x20not
+SF:\x20found\n")%r(RTSPRequest,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nC
+SF:ontent-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x2
+SF:0Request")%r(Help,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Typ
+SF:e:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")
+SF:%r(SSLSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%
+SF:r(TLSSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:
+SF:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r
+SF:(Kerberos,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20te
+SF:xt/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(FourO
+SF:hFourRequest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20t
+SF:ext/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDa
+SF:te:\x20Fri,\x2026\x20May\x202017\x2018:11:40\x20GMT\r\nContent-Length:\
+SF:x2019\r\n\r\n404\x20page\x20not\x20found\n")%r(LPDString,58,"HTTP/1\.1\
+SF:x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\
+SF:x20close\r\n\r\n400\x20Bad\x20Request")%r(SIPOptions,58,"HTTP/1\.1\x204
+SF:00\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\x20c
+SF:lose\r\n\r\n400\x20Bad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port6783-TCP:V=7.01%I=7%D=5/26%Time=59286FC3%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,7,"weave\x01\x02")%r(Help,7,"weave\x01\x02");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port9898-TCP:V=7.01%I=7%D=5/26%Time=59286FC3%P=x86_64-pc-linux-gnu%r(Ge
+SF:nericLines,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20t
+SF:ext/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(GetR
+SF:equest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/pl
+SF:ain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x2
+SF:0Fri,\x2026\x20May\x202017\x2018:11:15\x20GMT\r\nContent-Length:\x2019\
+SF:r\n\r\n404\x20page\x20not\x20found\n")%r(HTTPOptions,B0,"HTTP/1\.0\x204
+SF:04\x20Not\x20Found\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\n
+SF:X-Content-Type-Options:\x20nosniff\r\nDate:\x20Fri,\x2026\x20May\x20201
+SF:7\x2018:11:15\x20GMT\r\nContent-Length:\x2019\r\n\r\n404\x20page\x20not
+SF:\x20found\n")%r(RTSPRequest,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nC
+SF:ontent-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x2
+SF:0Request")%r(Help,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Typ
+SF:e:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")
+SF:%r(SSLSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%
+SF:r(TLSSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:
+SF:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r
+SF:(Kerberos,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20te
+SF:xt/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(FourO
+SF:hFourRequest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20t
+SF:ext/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDa
+SF:te:\x20Fri,\x2026\x20May\x202017\x2018:11:40\x20GMT\r\nContent-Length:\
+SF:x2019\r\n\r\n404\x20page\x20not\x20found\n")%r(LPDString,58,"HTTP/1\.1\
+SF:x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\
+SF:x20close\r\n\r\n400\x20Bad\x20Request")%r(SIPOptions,58,"HTTP/1\.1\x204
+SF:00\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\x20c
+SF:lose\r\n\r\n400\x20Bad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port10250-TCP:V=7.01%T=SSL%I=7%D=5/26%Time=59286FCE%P=x86_64-pc-linux-g
+SF:nu%r(GenericLines,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Typ
+SF:e:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")
+SF:%r(GetRequest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20
+SF:text/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nD
+SF:ate:\x20Fri,\x2026\x20May\x202017\x2018:11:26\x20GMT\r\nContent-Length:
+SF:\x2019\r\n\r\n404\x20page\x20not\x20found\n")%r(HTTPOptions,B0,"HTTP/1\
+SF:.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/plain;\x20charset=ut
+SF:f-8\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x20Fri,\x2026\x20May
+SF:\x202017\x2018:11:26\x20GMT\r\nContent-Length:\x2019\r\n\r\n404\x20page
+SF:\x20not\x20found\n")%r(RTSPRequest,58,"HTTP/1\.1\x20400\x20Bad\x20Reque
+SF:st\r\nContent-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x2
+SF:0Bad\x20Request")%r(Help,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCont
+SF:ent-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Re
+SF:quest")%r(SSLSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConte
+SF:nt-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Req
+SF:uest")%r(TLSSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConten
+SF:t-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Requ
+SF:est")%r(Kerberos,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%
+SF:r(FourOhFourRequest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Typ
+SF:e:\x20text/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosnif
+SF:f\r\nDate:\x20Fri,\x2026\x20May\x202017\x2018:11:52\x20GMT\r\nContent-L
+SF:ength:\x2019\r\n\r\n404\x20page\x20not\x20found\n")%r(LPDString,58,"HTT
+SF:P/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConne
+SF:ction:\x20close\r\n\r\n400\x20Bad\x20Request")%r(SIPOptions,58,"HTTP/1\
+SF:.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnectio
+SF:n:\x20close\r\n\r\n400\x20Bad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port10255-TCP:V=7.01%I=7%D=5/26%Time=59286FC3%P=x86_64-pc-linux-gnu%r(G
+SF:enericLines,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20
+SF:text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Get
+SF:Request,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/p
+SF:lain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x
+SF:20Fri,\x2026\x20May\x202017\x2018:11:15\x20GMT\r\nContent-Length:\x2019
+SF:\r\n\r\n404\x20page\x20not\x20found\n")%r(HTTPOptions,B0,"HTTP/1\.0\x20
+SF:404\x20Not\x20Found\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\
+SF:nX-Content-Type-Options:\x20nosniff\r\nDate:\x20Fri,\x2026\x20May\x2020
+SF:17\x2018:11:15\x20GMT\r\nContent-Length:\x2019\r\n\r\n404\x20page\x20no
+SF:t\x20found\n")%r(RTSPRequest,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n
+SF:Content-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x
+SF:20Request")%r(Help,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Ty
+SF:pe:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request"
+SF:)%r(SSLSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Typ
+SF:e:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")
+SF:%r(TLSSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%
+SF:r(Kerberos,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20t
+SF:ext/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Four
+SF:OhFourRequest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20
+SF:text/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nD
+SF:ate:\x20Fri,\x2026\x20May\x202017\x2018:11:40\x20GMT\r\nContent-Length:
+SF:\x2019\r\n\r\n404\x20page\x20not\x20found\n")%r(LPDString,58,"HTTP/1\.1
+SF:\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:
+SF:\x20close\r\n\r\n400\x20Bad\x20Request")%r(SIPOptions,58,"HTTP/1\.1\x20
+SF:400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\x20
+SF:close\r\n\r\n400\x20Bad\x20Request");
+MAC Address: 00:0C:29:87:5F:43 (VMware)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 192.168.41.72
+Host is up (0.00046s latency).
+Not shown: 65528 closed ports
+PORT      STATE SERVICE     VERSION
+22/tcp    open  ssh         OpenSSH 7.2p2 Ubuntu 4ubuntu2.1 (Ubuntu Linux; protocol 2.0)
+4194/tcp  open  unknown
+6781/tcp  open  unknown
+6782/tcp  open  unknown
+6783/tcp  open  unknown
+10250/tcp open  ssl/unknown
+10255/tcp open  unknown
+6 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port4194-TCP:V=7.01%I=7%D=5/26%Time=59286FC3%P=x86_64-pc-linux-gnu%r(Ge
+SF:nericLines,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20t
+SF:ext/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(GetR
+SF:equest,CC,"HTTP/1\.0\x20307\x20Temporary\x20Redirect\r\nLocation:\x20/c
+SF:ontainers/\r\nDate:\x20Fri,\x2026\x20May\x202017\x2018:11:15\x20GMT\r\n
+SF:Content-Length:\x2048\r\nContent-Type:\x20text/html;\x20charset=utf-8\r
+SF:\n\r\n<a\x20href=\"/containers/\">Temporary\x20Redirect</a>\.\n\n")%r(H
+SF:TTPOptions,9C,"HTTP/1\.0\x20307\x20Temporary\x20Redirect\r\nLocation:\x
+SF:20/containers/\r\nDate:\x20Fri,\x2026\x20May\x202017\x2018:11:15\x20GMT
+SF:\r\nContent-Length:\x200\r\nContent-Type:\x20text/plain;\x20charset=utf
+SF:-8\r\n\r\n")%r(RTSPRequest,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCo
+SF:ntent-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20
+SF:Request")%r(Help,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%
+SF:r(SSLSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:
+SF:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r
+SF:(TLSSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\
+SF:x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(
+SF:Kerberos,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20tex
+SF:t/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(FourOh
+SF:FourRequest,CC,"HTTP/1\.0\x20307\x20Temporary\x20Redirect\r\nLocation:\
+SF:x20/containers/\r\nDate:\x20Fri,\x2026\x20May\x202017\x2018:11:40\x20GM
+SF:T\r\nContent-Length:\x2048\r\nContent-Type:\x20text/html;\x20charset=ut
+SF:f-8\r\n\r\n<a\x20href=\"/containers/\">Temporary\x20Redirect</a>\.\n\n"
+SF:)%r(LPDString,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x
+SF:20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(S
+SF:IPOptions,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20te
+SF:xt/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port6781-TCP:V=7.01%I=7%D=5/26%Time=59286FC3%P=x86_64-pc-linux-gnu%r(Ge
+SF:nericLines,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20t
+SF:ext/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(GetR
+SF:equest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/pl
+SF:ain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x2
+SF:0Fri,\x2026\x20May\x202017\x2018:11:15\x20GMT\r\nContent-Length:\x2019\
+SF:r\n\r\n404\x20page\x20not\x20found\n")%r(HTTPOptions,B0,"HTTP/1\.0\x204
+SF:04\x20Not\x20Found\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\n
+SF:X-Content-Type-Options:\x20nosniff\r\nDate:\x20Fri,\x2026\x20May\x20201
+SF:7\x2018:11:15\x20GMT\r\nContent-Length:\x2019\r\n\r\n404\x20page\x20not
+SF:\x20found\n")%r(RTSPRequest,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nC
+SF:ontent-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x2
+SF:0Request")%r(Help,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Typ
+SF:e:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")
+SF:%r(SSLSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%
+SF:r(TLSSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:
+SF:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r
+SF:(Kerberos,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20te
+SF:xt/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(FourO
+SF:hFourRequest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20t
+SF:ext/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDa
+SF:te:\x20Fri,\x2026\x20May\x202017\x2018:11:40\x20GMT\r\nContent-Length:\
+SF:x2019\r\n\r\n404\x20page\x20not\x20found\n")%r(LPDString,58,"HTTP/1\.1\
+SF:x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\
+SF:x20close\r\n\r\n400\x20Bad\x20Request")%r(SIPOptions,58,"HTTP/1\.1\x204
+SF:00\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\x20c
+SF:lose\r\n\r\n400\x20Bad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port6782-TCP:V=7.01%I=7%D=5/26%Time=59286FC3%P=x86_64-pc-linux-gnu%r(Ge
+SF:nericLines,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20t
+SF:ext/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(GetR
+SF:equest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/pl
+SF:ain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x2
+SF:0Fri,\x2026\x20May\x202017\x2018:11:15\x20GMT\r\nContent-Length:\x2019\
+SF:r\n\r\n404\x20page\x20not\x20found\n")%r(HTTPOptions,B0,"HTTP/1\.0\x204
+SF:04\x20Not\x20Found\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\n
+SF:X-Content-Type-Options:\x20nosniff\r\nDate:\x20Fri,\x2026\x20May\x20201
+SF:7\x2018:11:15\x20GMT\r\nContent-Length:\x2019\r\n\r\n404\x20page\x20not
+SF:\x20found\n")%r(RTSPRequest,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nC
+SF:ontent-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x2
+SF:0Request")%r(Help,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Typ
+SF:e:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")
+SF:%r(SSLSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%
+SF:r(TLSSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:
+SF:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r
+SF:(Kerberos,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20te
+SF:xt/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(FourO
+SF:hFourRequest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20t
+SF:ext/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDa
+SF:te:\x20Fri,\x2026\x20May\x202017\x2018:11:40\x20GMT\r\nContent-Length:\
+SF:x2019\r\n\r\n404\x20page\x20not\x20found\n")%r(LPDString,58,"HTTP/1\.1\
+SF:x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\
+SF:x20close\r\n\r\n400\x20Bad\x20Request")%r(SIPOptions,58,"HTTP/1\.1\x204
+SF:00\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\x20c
+SF:lose\r\n\r\n400\x20Bad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port6783-TCP:V=7.01%I=7%D=5/26%Time=59286FC3%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,7,"weave\x01\x02")%r(Help,7,"weave\x01\x02");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port10250-TCP:V=7.01%T=SSL%I=7%D=5/26%Time=59286FCE%P=x86_64-pc-linux-g
+SF:nu%r(GenericLines,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Typ
+SF:e:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")
+SF:%r(GetRequest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20
+SF:text/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nD
+SF:ate:\x20Fri,\x2026\x20May\x202017\x2018:11:26\x20GMT\r\nContent-Length:
+SF:\x2019\r\n\r\n404\x20page\x20not\x20found\n")%r(HTTPOptions,B0,"HTTP/1\
+SF:.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/plain;\x20charset=ut
+SF:f-8\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x20Fri,\x2026\x20May
+SF:\x202017\x2018:11:26\x20GMT\r\nContent-Length:\x2019\r\n\r\n404\x20page
+SF:\x20not\x20found\n")%r(RTSPRequest,58,"HTTP/1\.1\x20400\x20Bad\x20Reque
+SF:st\r\nContent-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x2
+SF:0Bad\x20Request")%r(Help,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCont
+SF:ent-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Re
+SF:quest")%r(SSLSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConte
+SF:nt-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Req
+SF:uest")%r(TLSSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConten
+SF:t-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Requ
+SF:est")%r(Kerberos,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%
+SF:r(FourOhFourRequest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Typ
+SF:e:\x20text/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosnif
+SF:f\r\nDate:\x20Fri,\x2026\x20May\x202017\x2018:11:52\x20GMT\r\nContent-L
+SF:ength:\x2019\r\n\r\n404\x20page\x20not\x20found\n")%r(LPDString,58,"HTT
+SF:P/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConne
+SF:ction:\x20close\r\n\r\n400\x20Bad\x20Request")%r(SIPOptions,58,"HTTP/1\
+SF:.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnectio
+SF:n:\x20close\r\n\r\n400\x20Bad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port10255-TCP:V=7.01%I=7%D=5/26%Time=59286FC3%P=x86_64-pc-linux-gnu%r(G
+SF:enericLines,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20
+SF:text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Get
+SF:Request,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/p
+SF:lain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x
+SF:20Fri,\x2026\x20May\x202017\x2018:11:15\x20GMT\r\nContent-Length:\x2019
+SF:\r\n\r\n404\x20page\x20not\x20found\n")%r(HTTPOptions,B0,"HTTP/1\.0\x20
+SF:404\x20Not\x20Found\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\
+SF:nX-Content-Type-Options:\x20nosniff\r\nDate:\x20Fri,\x2026\x20May\x2020
+SF:17\x2018:11:15\x20GMT\r\nContent-Length:\x2019\r\n\r\n404\x20page\x20no
+SF:t\x20found\n")%r(RTSPRequest,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n
+SF:Content-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x
+SF:20Request")%r(Help,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Ty
+SF:pe:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request"
+SF:)%r(SSLSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Typ
+SF:e:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")
+SF:%r(TLSSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%
+SF:r(Kerberos,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20t
+SF:ext/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Four
+SF:OhFourRequest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20
+SF:text/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nD
+SF:ate:\x20Fri,\x2026\x20May\x202017\x2018:11:40\x20GMT\r\nContent-Length:
+SF:\x2019\r\n\r\n404\x20page\x20not\x20found\n")%r(LPDString,58,"HTTP/1\.1
+SF:\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:
+SF:\x20close\r\n\r\n400\x20Bad\x20Request")%r(SIPOptions,58,"HTTP/1\.1\x20
+SF:400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\x20
+SF:close\r\n\r\n400\x20Bad\x20Request");
+MAC Address: 00:0C:29:87:DC:8A (VMware)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 192.168.41.73
+Host is up (0.00045s latency).
+Not shown: 65528 closed ports
+PORT      STATE SERVICE     VERSION
+22/tcp    open  ssh         OpenSSH 7.2p2 Ubuntu 4ubuntu2.1 (Ubuntu Linux; protocol 2.0)
+4194/tcp  open  unknown
+6781/tcp  open  unknown
+6782/tcp  open  unknown
+6783/tcp  open  unknown
+10250/tcp open  ssl/unknown
+10255/tcp open  unknown
+6 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port4194-TCP:V=7.01%I=7%D=5/26%Time=59286FC3%P=x86_64-pc-linux-gnu%r(Ge
+SF:nericLines,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20t
+SF:ext/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(GetR
+SF:equest,CC,"HTTP/1\.0\x20307\x20Temporary\x20Redirect\r\nLocation:\x20/c
+SF:ontainers/\r\nDate:\x20Fri,\x2026\x20May\x202017\x2018:11:15\x20GMT\r\n
+SF:Content-Length:\x2048\r\nContent-Type:\x20text/html;\x20charset=utf-8\r
+SF:\n\r\n<a\x20href=\"/containers/\">Temporary\x20Redirect</a>\.\n\n")%r(H
+SF:TTPOptions,9C,"HTTP/1\.0\x20307\x20Temporary\x20Redirect\r\nLocation:\x
+SF:20/containers/\r\nDate:\x20Fri,\x2026\x20May\x202017\x2018:11:15\x20GMT
+SF:\r\nContent-Length:\x200\r\nContent-Type:\x20text/plain;\x20charset=utf
+SF:-8\r\n\r\n")%r(RTSPRequest,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCo
+SF:ntent-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20
+SF:Request")%r(Help,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%
+SF:r(SSLSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:
+SF:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r
+SF:(TLSSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\
+SF:x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(
+SF:Kerberos,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20tex
+SF:t/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(FourOh
+SF:FourRequest,CC,"HTTP/1\.0\x20307\x20Temporary\x20Redirect\r\nLocation:\
+SF:x20/containers/\r\nDate:\x20Fri,\x2026\x20May\x202017\x2018:11:40\x20GM
+SF:T\r\nContent-Length:\x2048\r\nContent-Type:\x20text/html;\x20charset=ut
+SF:f-8\r\n\r\n<a\x20href=\"/containers/\">Temporary\x20Redirect</a>\.\n\n"
+SF:)%r(LPDString,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x
+SF:20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(S
+SF:IPOptions,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20te
+SF:xt/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port6781-TCP:V=7.01%I=7%D=5/26%Time=59286FC3%P=x86_64-pc-linux-gnu%r(Ge
+SF:nericLines,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20t
+SF:ext/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(GetR
+SF:equest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/pl
+SF:ain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x2
+SF:0Fri,\x2026\x20May\x202017\x2018:11:15\x20GMT\r\nContent-Length:\x2019\
+SF:r\n\r\n404\x20page\x20not\x20found\n")%r(HTTPOptions,B0,"HTTP/1\.0\x204
+SF:04\x20Not\x20Found\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\n
+SF:X-Content-Type-Options:\x20nosniff\r\nDate:\x20Fri,\x2026\x20May\x20201
+SF:7\x2018:11:15\x20GMT\r\nContent-Length:\x2019\r\n\r\n404\x20page\x20not
+SF:\x20found\n")%r(RTSPRequest,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nC
+SF:ontent-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x2
+SF:0Request")%r(Help,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Typ
+SF:e:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")
+SF:%r(SSLSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%
+SF:r(TLSSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:
+SF:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r
+SF:(Kerberos,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20te
+SF:xt/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(FourO
+SF:hFourRequest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20t
+SF:ext/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDa
+SF:te:\x20Fri,\x2026\x20May\x202017\x2018:11:40\x20GMT\r\nContent-Length:\
+SF:x2019\r\n\r\n404\x20page\x20not\x20found\n")%r(LPDString,58,"HTTP/1\.1\
+SF:x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\
+SF:x20close\r\n\r\n400\x20Bad\x20Request")%r(SIPOptions,58,"HTTP/1\.1\x204
+SF:00\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\x20c
+SF:lose\r\n\r\n400\x20Bad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port6782-TCP:V=7.01%I=7%D=5/26%Time=59286FC3%P=x86_64-pc-linux-gnu%r(Ge
+SF:nericLines,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20t
+SF:ext/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(GetR
+SF:equest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/pl
+SF:ain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x2
+SF:0Fri,\x2026\x20May\x202017\x2018:11:15\x20GMT\r\nContent-Length:\x2019\
+SF:r\n\r\n404\x20page\x20not\x20found\n")%r(HTTPOptions,B0,"HTTP/1\.0\x204
+SF:04\x20Not\x20Found\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\n
+SF:X-Content-Type-Options:\x20nosniff\r\nDate:\x20Fri,\x2026\x20May\x20201
+SF:7\x2018:11:15\x20GMT\r\nContent-Length:\x2019\r\n\r\n404\x20page\x20not
+SF:\x20found\n")%r(RTSPRequest,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nC
+SF:ontent-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x2
+SF:0Request")%r(Help,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Typ
+SF:e:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")
+SF:%r(SSLSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%
+SF:r(TLSSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:
+SF:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r
+SF:(Kerberos,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20te
+SF:xt/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(FourO
+SF:hFourRequest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20t
+SF:ext/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDa
+SF:te:\x20Fri,\x2026\x20May\x202017\x2018:11:40\x20GMT\r\nContent-Length:\
+SF:x2019\r\n\r\n404\x20page\x20not\x20found\n")%r(LPDString,58,"HTTP/1\.1\
+SF:x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\
+SF:x20close\r\n\r\n400\x20Bad\x20Request")%r(SIPOptions,58,"HTTP/1\.1\x204
+SF:00\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\x20c
+SF:lose\r\n\r\n400\x20Bad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port6783-TCP:V=7.01%I=7%D=5/26%Time=59286FC3%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,7,"weave\x01\x02")%r(Help,7,"weave\x01\x02");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port10250-TCP:V=7.01%T=SSL%I=7%D=5/26%Time=59286FCE%P=x86_64-pc-linux-g
+SF:nu%r(GenericLines,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Typ
+SF:e:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")
+SF:%r(GetRequest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20
+SF:text/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nD
+SF:ate:\x20Fri,\x2026\x20May\x202017\x2018:11:26\x20GMT\r\nContent-Length:
+SF:\x2019\r\n\r\n404\x20page\x20not\x20found\n")%r(HTTPOptions,B0,"HTTP/1\
+SF:.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/plain;\x20charset=ut
+SF:f-8\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x20Fri,\x2026\x20May
+SF:\x202017\x2018:11:26\x20GMT\r\nContent-Length:\x2019\r\n\r\n404\x20page
+SF:\x20not\x20found\n")%r(RTSPRequest,58,"HTTP/1\.1\x20400\x20Bad\x20Reque
+SF:st\r\nContent-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x2
+SF:0Bad\x20Request")%r(Help,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCont
+SF:ent-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Re
+SF:quest")%r(SSLSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConte
+SF:nt-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Req
+SF:uest")%r(TLSSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConten
+SF:t-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Requ
+SF:est")%r(Kerberos,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%
+SF:r(FourOhFourRequest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Typ
+SF:e:\x20text/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosnif
+SF:f\r\nDate:\x20Fri,\x2026\x20May\x202017\x2018:11:52\x20GMT\r\nContent-L
+SF:ength:\x2019\r\n\r\n404\x20page\x20not\x20found\n")%r(LPDString,58,"HTT
+SF:P/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConne
+SF:ction:\x20close\r\n\r\n400\x20Bad\x20Request")%r(SIPOptions,58,"HTTP/1\
+SF:.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnectio
+SF:n:\x20close\r\n\r\n400\x20Bad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port10255-TCP:V=7.01%I=7%D=5/26%Time=59286FC3%P=x86_64-pc-linux-gnu%r(G
+SF:enericLines,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20
+SF:text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Get
+SF:Request,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/p
+SF:lain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x
+SF:20Fri,\x2026\x20May\x202017\x2018:11:15\x20GMT\r\nContent-Length:\x2019
+SF:\r\n\r\n404\x20page\x20not\x20found\n")%r(HTTPOptions,B0,"HTTP/1\.0\x20
+SF:404\x20Not\x20Found\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\
+SF:nX-Content-Type-Options:\x20nosniff\r\nDate:\x20Fri,\x2026\x20May\x2020
+SF:17\x2018:11:15\x20GMT\r\nContent-Length:\x2019\r\n\r\n404\x20page\x20no
+SF:t\x20found\n")%r(RTSPRequest,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n
+SF:Content-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x
+SF:20Request")%r(Help,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Ty
+SF:pe:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request"
+SF:)%r(SSLSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Typ
+SF:e:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")
+SF:%r(TLSSessionReq,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%
+SF:r(Kerberos,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20t
+SF:ext/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Four
+SF:OhFourRequest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20
+SF:text/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\nD
+SF:ate:\x20Fri,\x2026\x20May\x202017\x2018:11:40\x20GMT\r\nContent-Length:
+SF:\x2019\r\n\r\n404\x20page\x20not\x20found\n")%r(LPDString,58,"HTTP/1\.1
+SF:\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:
+SF:\x20close\r\n\r\n400\x20Bad\x20Request")%r(SIPOptions,58,"HTTP/1\.1\x20
+SF:400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\x20
+SF:close\r\n\r\n400\x20Bad\x20Request");
+MAC Address: 00:0C:29:42:12:13 (VMware)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri May 26 19:12:46 2017 -- 3 IP addresses (3 hosts up) scanned in 102.81 seconds

