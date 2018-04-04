@@ -1,4 +1,4 @@
-<image src="/images/kubernetes-architecture.jpg"/>
+<image src="/images/Attack-Surface.jpg"/>
 
 --
 
@@ -33,10 +33,10 @@ One of the challenges in reviewing "Kubernetes" is that this variety means that 
 
 --
 
-### Other means of acquiring access - Github!
-
-<img src="/images/github_config_exposed.png"/>
+# The importance of secure defaults!
 
 --
 
-# The importance of secure defaults!
+### Other means of acquiring access - Github!
+
+<img src="/images/github_config_exposed.png"/>

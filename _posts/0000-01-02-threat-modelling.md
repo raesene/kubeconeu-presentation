@@ -14,7 +14,7 @@ Threat models are very important in security.  First question in response to "Is
 
 --
 
-# Hacktivists / "Anonymous"
+## Hacktivists / "Anonymous"
 
 --
 
@@ -22,4 +22,4 @@ Threat models are very important in security.  First question in response to "Is
 
 --
 
-# Pentesters/Bug Bounty Participants!
+## Pentesters/Bug Bounty Participants!

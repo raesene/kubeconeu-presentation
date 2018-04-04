@@ -96,6 +96,6 @@ Also due to K8s not managing user identity, questions like "who has cluster-admi
 
 ## 10. Regular Upgrades!
 
--- 
+--
 
 ## Honourable Mention - Cloud Rights

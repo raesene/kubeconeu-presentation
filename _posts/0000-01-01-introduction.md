@@ -1,4 +1,4 @@
-<section data-background-image="images/securitay-title.jpg" width="70%">
+<section data-background-image="images/Pirate-Intro-text.jpg" width="60%">
 </section>
 Note: One of the reasons for doing this research and contributing to the CIS standard was the lack of existing information on Kubernetes Security.  That said there are some good presentations to go watch https://www.youtube.com/watch?v=BER8uridVIs - Securing Kubernetes, Jesse Endahl. https://www.youtube.com/watch?v=xpFpdYtSoBw - Security Best Practices for Kubernetes Deployment - Michael Cherny
 
