@@ -6,20 +6,13 @@ Threat models are very important in security.  First question in response to "Is
 
 --
 
-# Random Internet Attacks
+<image src="/images/random-attacker.jpg"/>
 
 --
 
-# Targeted Cybercrime
+<image src="/images/targeted-attack.jpg"/>
 
 --
 
-## Hacktivists / "Anonymous"
+<image src="/images/nation-state.jpg"/>
 
---
-
-# Nation state
-
---
-
-## Pentesters/Bug Bounty Participants!
