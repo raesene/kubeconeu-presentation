@@ -22,7 +22,7 @@
 
 Note:
 
-Worth mentioning the Tesla story at this point.
+Worth mentioning the etcd problem at this point... https://elweb.co/the-security-footgun-in-etcd/ which easily found loads of passwords and other items by just hitting unauthenticated etcd servers found via shodan. 
 
 --
 

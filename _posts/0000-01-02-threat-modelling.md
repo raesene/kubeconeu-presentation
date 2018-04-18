@@ -2,7 +2,7 @@
 
 Note:
 
-Threat models are very important in security.  First question in response to "Is this secure?" is "From what?".  Also very important when discussing Kubernetes security with developers or other stake holders as they may feel that a deployment is secure when they've explicitly ruled out some threat models (e.g. malicious container)
+Threat models are very important in security.  First question in response to "Is this secure?" is "From what?".  Also very important when discussing Kubernetes security with developers or other stake holders as they may feel that a deployment is secure when they've explicitly ruled out some threat models (e.g. an attacker who can get access to a container on your platform)
 
 --
 

@@ -13,13 +13,7 @@ So the attack surface for a system is very important as it represents the ways i
 
 Note:
 
-There are currently over 66 different flavours of k8s available (https://docs.google.com/spreadsheets/d/1LxSqBzjOxfGx3cmtZ4EbB_BGCxT_wlxW_xgHVVa23es/edit#gid=0), in addition to the option of spinning up the cluster manually.  This leads to probably one of the larger problems for k8s security, which is that you get the defaults that the cluster provider decided were appropriate from a security standpoint, and this is generally opaque to the end user.
-
-On premises could be something like kubeadm or kismatic. Cloud base self-managed could be something like kops, cloud-based provider managed is more like GKE.
-
-There are some big differences between quite lightweight installers, to full PAAS offerings like Openshift.
-
-One of the challenges in reviewing "Kubernetes" is that this variety means that there are lots of different deployment mechanisms, which have different security options set by default.
+The deployment options you choose will have an impact on your attack surface as they will have different services running, use different network and can addtional ancilliary services (like web dashboards , or container registries) that come with them.  This variety makes any generic statements around the attack surface of a k8s cluster, kind of hard to come to.
 
 --
 

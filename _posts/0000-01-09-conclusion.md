@@ -7,9 +7,9 @@
 
 # Conclusion
 
-* Security Model isn't perfect, but is improving.
 * Default Security Options very important.
 * Always think about your threat model and attack surface :)
+* Get the basics right
 
 ---
 
