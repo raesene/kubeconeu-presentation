@@ -1,7 +1,7 @@
 # Resources
 
 * CIS Security Guide for Kubernetes - https://learn.cisecurity.org/benchmarks
-* KubeAutoAnalyzer - https://github.com/nccgroup/kube-auto-analyzer
+
 
 ---
 
