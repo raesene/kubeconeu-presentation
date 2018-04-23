@@ -6,14 +6,7 @@ So the attack surface for a system is very important as it represents the ways i
 
 --
 
-### Kubernetes Deployment Optons
-
-<img src="/images/wordcloud.png" width="75%"/>
-
-
-Note:
-
-The deployment options you choose will have an impact on your attack surface as they will have different services running, use different network and can addtional ancilliary services (like web dashboards , or container registries) that come with them.  This variety makes any generic statements around the attack surface of a k8s cluster, kind of hard to come to.
+<image src="/images/shipwreck.jpg"/>
 
 --
 
