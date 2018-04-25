@@ -15,10 +15,6 @@ Note: One of the reasons for doing this research and contributing to the CIS sta
 
 <img src="/images/Loch_goil_hebridean_princess.jpg"/>
 
---
-
-<img src="/images/lochgoilhead_internet_access.jpg"/>
-
 ---
 
 # Topics

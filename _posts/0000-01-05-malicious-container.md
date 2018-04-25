@@ -25,3 +25,11 @@ Note:  from demo notes, service account tokens can be very dangerous if RBAC isn
 --
 
 <video src="/demo_videos/awsmeta.mp4"/>
+
+--
+
+# The importance of secure defaults!
+
+Note:
+
+The most important point in the talk.  What the distribution considers a "secure default" isn't necessarily what you should.  It's vitally important to ensure that whatever mechanism you choose to use to deploy and manage Kubernetes chooses defaults you're happy with. Many distros still aren't shipping with RBAC enabled, so service tokens are privileged, or are shipping with exposed etcd/Kubelet settings.
