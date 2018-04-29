@@ -16,15 +16,7 @@ Note:  from demo notes, service account tokens can be very dangerous if RBAC isn
 
 --
 
-<video src="/demo_videos/service-token.mp4"/>
-
---
-
 # Leveraging Access in the Cloud
-
---
-
-<video src="/demo_videos/awsmeta.mp4"/>
 
 --
 
